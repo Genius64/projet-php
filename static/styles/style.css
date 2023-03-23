@@ -40,70 +40,12 @@ header a:last-child input{
     background-color: #EE412D;
     color: #fff;
 }
-h1{
-    margin-bottom: 30px;
-    font-size: 25px;
-}
-h2{
-    font-size: 20px;
-    margin-bottom: 5px;
-}
-ul{
-    display: flex;
-    justify-content: space-between;
-    min-height: 145px;
-    margin-bottom: 20px;
-}
-li{
-    width: 30vw;
-    background-color: #FC8400;
-    border-radius: 5px;
-    height: 145px;
-}
-li img{
-    width: 100%;
-    height: 105px;
-    border-radius: 5px 5px 0px 0px;
-}
-li i{
-    padding: 3.5vw;
-}
-li p{
-    color: #fff;
-    font-size: 10px;
-    align-self: center;
-    font-weight: bolder;
-    margin-right: 5px;
-}
-li div{
-    display: flex;
-    align-items: center;
-    height: 40px;
-}
-@media screen and (min-width: 700px ){
-    header input{
+@media screen and (min-width: 700px) {
+    .btn{
         height: 50px;
-    }
-    li {
-        height: 335px;
-    }
-    li img{
-        height: 210px;
-    }
-    li div{
-        height: 115px;
-    }
-    main p{
-        font-size: 25px;
     }
     input{
         height: 30px;
         font-size: 20px;
-    }
-    h1{
-        font-size: 45px;
-    }
-    h2{
-        font-size: 30px;
     }
 }
