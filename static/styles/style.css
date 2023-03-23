@@ -10,7 +10,7 @@ body > *{
     margin-left: 2.5%;
     margin-right: 2.5%;
 }
-body > input{
+main > input{
     margin-bottom: 30px;
     border-radius: 8px;
     border-color: #781CA3;
@@ -38,7 +38,7 @@ header input{
 header a:last-child input{
     border-color: #000;
     background-color: #EE412D;
-    color: #fff;    height: 5ch;
+    color: #fff;
 }
 h1{
     margin-bottom: 30px;
@@ -46,6 +46,7 @@ h1{
 }
 h2{
     font-size: 20px;
+    margin-bottom: 5px;
 }
 ul{
     display: flex;
@@ -65,7 +66,7 @@ li img{
     border-radius: 5px 5px 0px 0px;
 }
 li i{
-    padding: 5px;
+    padding: 3.5vw;
 }
 li p{
     color: #fff;
@@ -78,4 +79,31 @@ li div{
     display: flex;
     align-items: center;
     height: 40px;
+}
+@media screen and (min-width: 700px ){
+    header input{
+        height: 50px;
+    }
+    li {
+        height: 335px;
+    }
+    li img{
+        height: 210px;
+    }
+    li div{
+        height: 115px;
+    }
+    main p{
+        font-size: 25px;
+    }
+    input{
+        height: 30px;
+        font-size: 20px;
+    }
+    h1{
+        font-size: 45px;
+    }
+    h2{
+        font-size: 30px;
+    }
 }

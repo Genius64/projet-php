@@ -61,11 +61,12 @@ body > ul input{
     border-color: #781CA3;
     padding: 5px;
 }
-ul p:nth-of-type(2){
+ul p:not(:first-of-type){
     margin-top: 20px;
 }
 ul > p{
     margin-bottom: 5px;
+    font-size: 14px;
 }
 ul > :last-child{
     background-color: #EE412D;
@@ -89,9 +90,4 @@ ul div{
 ul div p{
     margin-left: 10px;
     font-size: 12px;
-}
-ul div input :checked{
-    background-color: #ff0000;
-    border: none;
-
 }

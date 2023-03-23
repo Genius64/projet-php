@@ -61,20 +61,19 @@ body > ul input{
     border-color: #781CA3;
     padding: 5px;
 }
-ul p:nth-of-type(2){
+ul p:not(:first-of-type){
     margin-top: 20px;
 }
 ul > p{
     margin-bottom: 5px;
+    font-size: 14px;
 }
-ul > :last-child{
+ul > a input{
     background-color: #EE412D;
     color: #fff;
     border-radius: 5px;
     padding: 5px;
     width: content;
-    align-self: center;
-    margin-top: 10px;
 }
 ul div{
     display: flex;
@@ -85,7 +84,8 @@ ul div p{
     margin-left: 10px;
     font-size: 12px;
 }
-ul div input{
-    background-color: #ff0000;
-    border: none;
+ul > :last-child{
+    width: fit-content;
+    margin-top: 10px;
+    align-self: center;
 }
