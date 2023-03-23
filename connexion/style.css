@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+body{
+    background-color: #CCCCCC;
+}
+body > *{
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+body > input{
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border-color: #781CA3;
+    width: 90vw;
+    padding: 5px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: #000 1px solid;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 30px;
+    padding-right: 10px;
+}
+header img{
+    width: 40vw;
+}
+header input{
+    border-color: #EE412D;
+    border-radius: 5px;
+    padding: 5px;
+}
+header a:last-child input{
+    border-color: #000;
+    background-color: #EE412D;
+    color: #fff;
+}
+h1{
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px #000 solid;
+    padding: 25px;
+}
+body > *:not(header){
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+body > ul input{
+    border-radius: 8px;
+    border-color: #781CA3;
+    padding: 5px;
+}
+ul p:nth-of-type(2){
+    margin-top: 20px;
+}
+ul > p{
+    margin-bottom: 5px;
+}
+ul > :last-child{
+    background-color: #EE412D;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    width: content;
+    align-self: center;
+    margin-top: 10px;
+}
+ul a{
+    margin: 4px;
+    color: #e00000;
+    text-decoration: none;
+    font-size: 10px;
+}
+ul div{
+    display: flex;
+    margin-top: 10px;
+}
+ul div p{
+    margin-left: 10px;
+    font-size: 12px;
+}
+ul div input :checked{
+    background-color: #ff0000;
+    border: none;
+
+}

@@ -14,15 +14,21 @@ body > input{
     margin-bottom: 30px;
     border-radius: 8px;
     border-color: #781CA3;
-    width: 95vw;
+    width: 90vw;
+    padding: 5px;
 }
 header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-bottom: #000 1px solid;
     padding-bottom: 5px;
     padding-top: 5px;
     margin-bottom: 30px;
+    padding-right: 10px;
+}
+header img{
+    width: 40vw;
 }
 header input{
     border-color: #EE412D;
@@ -32,10 +38,14 @@ header input{
 header a:last-child input{
     border-color: #000;
     background-color: #EE412D;
-    color: #fff;
+    color: #fff;    height: 5ch;
 }
 h1{
     margin-bottom: 30px;
+    font-size: 25px;
+}
+h2{
+    font-size: 20px;
 }
 ul{
     display: flex;
@@ -47,6 +57,7 @@ li{
     width: 30vw;
     background-color: #FC8400;
     border-radius: 5px;
+    height: 145px;
 }
 li img{
     width: 100%;
@@ -54,12 +65,17 @@ li img{
     border-radius: 5px 5px 0px 0px;
 }
 li i{
-    margin: 10px;
+    padding: 5px;
 }
 li p{
     color: #fff;
-
+    font-size: 10px;
+    align-self: center;
+    font-weight: bolder;
+    margin-right: 5px;
 }
 li div{
     display: flex;
+    align-items: center;
+    height: 40px;
 }
