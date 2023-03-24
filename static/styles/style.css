@@ -7,15 +7,8 @@ body{
     background-color: #CCCCCC;
 }
 body > *{
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-}
-main > input{
-    margin-bottom: 30px;
-    border-radius: 8px;
-    border-color: #781CA3;
-    width: 90vw;
-    padding: 5px;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
 }
 header{
     display: flex;
@@ -30,22 +23,39 @@ header{
 header img{
     width: 40vw;
 }
-header input{
-    border-color: #EE412D;
+header nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.btn{
+    border: 1px #EE412D solid;
     border-radius: 5px;
     padding: 5px;
+    background-color: #fff;
+    align-self: center;
 }
-header a:last-child input{
+header nav :last-child input{
     border-color: #000;
     background-color: #EE412D;
     color: #fff;
 }
+main > input{
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border-color: #781CA3;
+    width: 90vw;
+    padding: 5px;
+}
 @media screen and (min-width: 700px) {
     .btn{
         height: 50px;
+        border-width: 3px;
     }
     input{
         height: 30px;
         font-size: 20px;
+        border-width: 3px;
     }
 }

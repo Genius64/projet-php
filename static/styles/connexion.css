@@ -3,15 +3,14 @@ body{
     flex-direction: column;
 }
 main{
-    max-width: 500px;
-    width: 100%;
     align-self: center;
+    width: 280px;
 }
 h1{
     margin-bottom: 30px;
     font-size: 25px;
 }
-ul{
+main ul{
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -19,19 +18,23 @@ ul{
     border: 1px #000 solid;
     padding: 25px;
 }
-body > ul input{
+main > ul input{
     border-radius: 8px;
     border-color: #781CA3;
-    padding: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
-ul p:not(:first-of-type){
+main > ul input:not(.btn , #remember){
+    width: 100%;
+    padding-left: 5px;
+}
+main ul label:not(:first-of-type){
     margin-top: 20px;
 }
-ul > p{
-    margin-bottom: 5px;
-    font-size: 14px;
+main ul li > label{
+    font-size: 16px;
 }
-ul > :last-child{
+main ul > :last-child > :last-child{
     background-color: #EE412D;
     color: #fff;
     border-radius: 5px;
@@ -39,24 +42,54 @@ ul > :last-child{
     width: content;
     align-self: center;
     margin-top: 10px;
+    border-color: #000;
 }
-ul a{
-    margin: 4px;
+main ul a{
     color: #e00000;
     text-decoration: none;
-    font-size: 10px;
-}
-ul section{
-    display: flex;
+    font-size: 14px;
     margin-top: 10px;
 }
-ul section p{
+main ul section{
+    display: flex;
+}
+main ul section label{
     margin-left: 10px;
     font-size: 12px;
 }
+main ul li{
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+}
+main ul li:nth-child(3){
+    margin: 5px;
+    align-items: flex-start;
+}
+/*
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  input[type="checkbox"]:checked {
+    background-color: #EE412D;
+  }
+  */
 @media screen and (min-width: 700px ){
-    main p{
-        font-size: 25px;
+    main{
+        width: 500px;
+    }
+    main ul li label{
+        font-size: xx-large;
     }
     input{
         height: 30px;
@@ -68,7 +101,7 @@ ul section p{
     main a{
         font-size: medium;
     }
-    main ul section p{
+    main ul section label{
         font-size: x-large;
     }
 }

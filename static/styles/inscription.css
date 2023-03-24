@@ -1,12 +1,16 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
 main{
-    margin-left: 10vw;
-    margin-right: 10vw;
+    align-self: center;
+    width: 280px;
 }
 h1{
     margin-bottom: 30px;
     font-size: 25px;
 }
-ul{
+main ul{
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -14,36 +18,65 @@ ul{
     border: 1px #000 solid;
     padding: 25px;
 }
-body > ul input{
+main > ul input{
     border-radius: 8px;
     border-color: #781CA3;
-    padding: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
-ul p:not(:first-of-type){
+main > ul input:not(.btn , #terms){
+    width: 100%;
+    padding-left: 5px;
+}
+main ul label:not(:first-of-type){
     margin-top: 20px;
 }
-ul > p{
-    margin-bottom: 5px;
-    font-size: 14px;
+main ul li > label{
+    font-size: 16px;
 }
-ul > a input{
+main ul > :last-child > :last-child{
     background-color: #EE412D;
     color: #fff;
     border-radius: 5px;
     padding: 5px;
     width: content;
-}
-ul section{
-    display: flex;
-    align-items: flex-start;
+    align-self: center;
     margin-top: 10px;
+    border-color: #000;
 }
-ul section p{
+main ul section{
+    display: flex;
+}
+main ul section label{
     margin-left: 10px;
     font-size: 12px;
 }
-ul > :last-child{
-    width: fit-content;
-    margin-top: 10px;
-    align-self: center;
+main ul li:nth-child(3){
+    margin: 5px;
+}
+main ul li{
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+}
+@media screen and (min-width: 700px ){
+    main{
+        width: 500px;
+    }
+    main ul li label{
+        font-size: xx-large;
+    }
+    input{
+        height: 30px;
+        font-size: 20px;
+    }
+    h1{
+        font-size: 45px;
+    }
+    main a{
+        font-size: medium;
+    }
+    main ul section label{
+        font-size: x-large;
+    }
 }

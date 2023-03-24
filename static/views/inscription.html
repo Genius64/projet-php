@@ -11,25 +11,39 @@
 <body>
     <header>
         <a href="../../"><img src="../assets/images/logo.svg" alt="Search / jeux de rôle"></a>
-        <a href="connexion.html"><input class="btn" type="button" value="Connexion"></a>
-        <a href="#"><input class="btn" type="button" value="Inscription"></a>
+        <nav>
+            <a href="connexion.html"><input class="btn" type="button" value="Connexion"></a>
+            <a href="#"><input class="btn" type="button" value="Inscription"></a>
+        </nav>
     </header>
     <main>
         <h1>INSCRIPTION</h1>
         <ul>
-            <p>Nom d'utilisateur</p>
-            <input type="text" placeholder="Utilisateur205">
-            <p>Adresse e-mail</p>
-            <input type="email" placeholder="email@site.com">
-            <p>Mot de passe</p>
-            <input type="password" placeholder=".............">
-            <p>Confirmation mot de passe</p>
-            <input type="password" placeholder=".............">
-            <section>
-                <input type="checkbox"> 
-                <p>J’accepte les conditions d’utilisation</p>
-            </section>
-            <a href="profil.html"><input class="btn" type="button" value="Inscription"></a>
+            <li>
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" id="username" placeholder="Utilisateur205">
+            </li>
+            <li>
+                <label for="email">Adresse e-mail</label>
+                <input type="email" id="email" placeholder="email@site.com">
+            </li>
+            <li>
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" placeholder=".............">
+            </li>
+            <li>
+                <label for="password-confirm">Confirmation mot de passe</label>
+                <input type="password" id="password-confirm" placeholder=".............">
+            </li>
+            <li>
+                <section>
+                    <input type="checkbox" id="terms">
+                    <label for="terms">J’accepte les conditions d’utilisation</label>
+                </section>
+            </li>
+            <li>
+                <input class="btn" type="submit" value="Inscription">
+            </li>
         </ul>
     </main>
 </body>
