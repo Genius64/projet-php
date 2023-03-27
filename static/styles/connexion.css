@@ -50,10 +50,11 @@ main ul a{
     font-size: 14px;
     margin-top: 10px;
 }
-main ul section{
+main ul li:nth-last-child(2){
     display: flex;
+    flex-direction: row;
 }
-main ul section label{
+main ul li:nth-last-child(2) label{
     margin-left: 10px;
     font-size: 12px;
 }
@@ -66,24 +67,6 @@ main ul li:nth-child(3){
     margin: 5px;
     align-items: flex-start;
 }
-/*
-input[type="checkbox"] {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 20px;
-    height: 20px;
-    background-color: #ccc;
-    border-radius: 4px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-  }
-  input[type="checkbox"]:checked {
-    background-color: #EE412D;
-  }
-  */
 @media screen and (min-width: 700px ){
     main{
         width: 500px;
@@ -98,10 +81,10 @@ input[type="checkbox"] {
     h1{
         font-size: 45px;
     }
-    main a{
-        font-size: medium;
+    main ul a{
+        font-size: 24px;
     }
-    main ul section label{
+    main ul li:nth-last-child(2) label{
         font-size: x-large;
     }
 }

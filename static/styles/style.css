@@ -2,6 +2,11 @@
     padding: 0;
     margin: 0;
     list-style-type: none;
+    max-width: 100%;
+}
+main{
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 body{
     background-color: #CCCCCC;
