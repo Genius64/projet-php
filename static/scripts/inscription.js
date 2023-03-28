@@ -10,6 +10,7 @@ btnInscription.addEventListener("click", e =>{
 
     if (username.length >= 4 && email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/) && password.length >= 8 && password === passwordConfirm) {
         if(terms.checked){
+            let newLocation = false;
             const data = { username: username, email: email, password: password };
         fetch(url, {
             method: 'POST',
@@ -22,6 +23,8 @@ btnInscription.addEventListener("click", e =>{
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erreur lors de la récupération des données.');
+            }else{
+                newLocation = true;
             }
             return response.json();
         })
@@ -37,4 +40,7 @@ btnInscription.addEventListener("click", e =>{
     } else {
         alert("Formulaire incomplet ou invalide");
     }
-})
+    if(newLocation === true){
+        window.location.replace('profil.html');
+    }
+});

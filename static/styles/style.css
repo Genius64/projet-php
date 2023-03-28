@@ -4,16 +4,14 @@
     list-style-type: none;
     max-width: 100%;
 }
-main{
-    margin-left: 10vw;
-    margin-right: 10vw;
-}
 body{
     background-color: #CCCCCC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 body > *{
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
+    width: 95vw;
 }
 header{
     display: flex;
@@ -26,7 +24,8 @@ header{
     padding-right: 10px;
 }
 header img{
-    width: 40vw;
+    width: 45vw;
+    max-width: 320px;
 }
 header nav{
     display: flex;
@@ -34,33 +33,55 @@ header nav{
     align-items: center;
     width: 100%;
 }
-.btn{
+.btn, .submit{
     border: 1px #EE412D solid;
     border-radius: 5px;
-    padding: 5px;
+    padding: 2px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     background-color: #fff;
     align-self: center;
+    text-decoration: none;
+    cursor: pointer;
 }
-header nav :last-child input{
+header nav :last-child{
     border-color: #000;
     background-color: #EE412D;
     color: #fff;
 }
-main > input{
-    margin-bottom: 30px;
-    border-radius: 8px;
-    border-color: #781CA3;
-    width: 90vw;
-    padding: 5px;
+body input[type="checkbox"]{
+    width: 35px;
+}
+main h1{
+    color: #B22621;
+}
+main h2{
+    color: #B22621;
 }
 @media screen and (min-width: 700px) {
-    .btn{
-        height: 50px;
+    .btn, .submit{
+        padding: 15px;
         border-width: 3px;
+        font-size: x-large;
+    }
+    .submit{
+        height: 60px;
     }
     input{
         height: 30px;
         font-size: 20px;
         border-width: 3px;
+    }
+    main h1{
+        font-size: 45px;
+    }
+    main h2{
+        font-size: 30px;
+    }
+    body{
+        padding-bottom: 50px;
+    }
+    body input[type="checkbox"]{
+        width: 20px;
     }
 }

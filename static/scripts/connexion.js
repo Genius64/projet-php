@@ -17,14 +17,15 @@ btnConnexion.addEventListener('click', e=> {
         body: JSON.stringify(data)
     })
     .then(response => {
-        if (!response.ok) {
+        if(!response.ok){
             throw new Error('Erreur lors de la récupération des données.');
         }
         return response.json();
     })
     .then(data => {
-        if (data.success) {
+        if(data){
             window.location.replace('profil.html');
+            alert('Identifiants corrects');
         } else {
             alert('Identifiants incorrects');
         }

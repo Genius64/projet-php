@@ -13,23 +13,26 @@
     <header>
         <a href="../../"><img src="../assets/images/logo.svg" alt="Search / jeux de rôle"></a>
         <nav>
-            <a href="#"><input class="btn" type="button" value="Connexion"></a>
-            <a href="inscription.html"><input class="btn" type="button" value="Inscription"></a>
+            <a href="#" class="btn">Connexion</a>
+            <a href="inscription.html" class="btn">Inscription</a>
         </nav>
     </header>
     <main>
         <h1>PROFIL</h1>
         <ul>
-            <li><img src="#" alt="#"></li>
+            <li>
+                <i class="fa-solid fa-user"></i>
+                <img src="#" alt="#">
+            </li>
             <li>
                 <p id="username"></p>
                 <p id="email"></p>
                 <p id="password"></p>
             </li>
         </ul>
-        <p><i class="fa-solid fa-star" style="color: #FFF500;"></i> Favorits <i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-down"></i></p>
+        <p><i class="fa-solid fa-star" style="color: #FFF500;"></i> Favorits <i id="caret-right" class="fa-solid fa-caret-right"></i><i id="caret-down" class="fa-solid fa-caret-down"></i></p>
         <label for="description">Description</label>
-        <input type="text" id="description" placeholder="(facultatif)...">
-        <input class="btn" type="button" value="Enregistrer">
+        <textarea name="description" id="description" cols="30" rows="10" placeholder="(facultatif)..."></textarea>
+        <input class="submit" type="submit" value="Enregistrer">
     </main>
 </body>
