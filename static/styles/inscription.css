@@ -6,7 +6,7 @@ h1{
     margin-bottom: 30px;
     font-size: 25px;
 }
-main ul{
+main form{
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -14,23 +14,23 @@ main ul{
     border: 1px #000 solid;
     padding: 25px;
 }
-main > ul input{
+main > form input{
     border-radius: 8px;
     border-color: #781CA3;
     padding-bottom: 5px;
     padding-top: 5px;
 }
-main > ul input:not(.btn , .submit , #terms){
+main > form input:not(.btn , .submit , #terms){
     width: 100%;
     padding-left: 5px;
 }
-main ul label:not(:first-of-type){
+main form label:not(:first-of-type){
     margin-top: 20px;
 }
-main ul li > label{
+main form section > label{
     font-size: 16px;
 }
-main ul > :last-child > :last-child{
+main form > :last-child{
     background-color: #EE412D;
     color: #fff;
     border-radius: 5px;
@@ -40,26 +40,26 @@ main ul > :last-child > :last-child{
     margin-top: 10px;
     border-color: #000;
 }
-main ul section{
-    display: flex;
-}
-main ul section label{
+main form section label{
     margin-left: 10px;
     font-size: 12px;
 }
 main form:nth-child(3){
     margin: 5px;
 }
-main ul li{
+main form section{
     display: flex;
     flex-direction: column;
     margin: 8px;
+}
+main form #checkbox-terms{
+    flex-direction: row;
 }
 @media screen and (min-width: 700px){
     main{
         width: 500px;
     }
-    main ul li label{
+    main form section label{
         font-size: xx-large;
     }
     input{
@@ -69,7 +69,7 @@ main ul li{
     main a{
         font-size: medium;
     }
-    main ul section label{
+    main form #checkbox-terms label{
         font-size: x-large;
     }
 }

@@ -43,4 +43,5 @@ btnInscription.addEventListener("click", e =>{
     if(newLocation === true){
         window.location.replace('profil.html');
     }
+    e.preventDefault();
 });

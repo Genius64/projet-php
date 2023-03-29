@@ -14,23 +14,23 @@ main form{
     border: 1px #000 solid;
     padding: 25px;
 }
-main > ul input{
+main > form input{
     border-radius: 8px;
     border-color: #781CA3;
     padding-bottom: 5px;
     padding-top: 5px;
 }
-main > ul input:not(.btn , .submit , #remember){
+main > form input:not(.btn , .submit , #remember){
     width: 100%;
     padding-left: 5px;
 }
-main ul label:not(:first-of-type){
+main form label:not(:first-of-type){
     margin-top: 20px;
 }
-main ul li > label{
+main form section > label{
     font-size: 20px;
 }
-main ul > :last-child > :last-child{
+main form > :last-child{
     background-color: #EE412D;
     color: #fff;
     border-radius: 5px;
@@ -47,20 +47,20 @@ main a{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-main form li:nth-last-child(2){
+main form section:nth-last-child(2){
     display: flex;
     flex-direction: row;
 }
-main ul li:nth-last-child(2) label{
+main form section:nth-last-child(2) label{
     margin-left: 5px;
     font-size: 18px;
 }
-main ul li{
+main form section{
     display: flex;
     flex-direction: column;
     margin: 8px;
 }
-main ul li:nth-child(3){
+main form section:nth-child(3){
     margin: 5px;
     align-items: flex-start;
 }
@@ -68,17 +68,17 @@ main ul li:nth-child(3){
     main{
         width: 500px;
     }
-    main ul li label{
+    main form section label{
         font-size: xx-large;
     }
     input{
         height: 30px;
         font-size: 20px;
     }
-    main ul a{
+    main form a{
         font-size: 24px;
     }
-    main ul li:nth-last-child(2) label{
+    main form section:nth-last-child(2) label{
         font-size: x-large;
     }
 }
