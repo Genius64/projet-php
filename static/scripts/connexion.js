@@ -20,6 +20,8 @@ btnConnexion.addEventListener('click', e => {
         if(response.status !== 200){
             throw new Error('Erreur lors de la récupération des données.');
         }
+        
+        sessionStorage.setItem("token", response.token);
         return response.json();
     })
     .then(data => {
