@@ -30,11 +30,39 @@ if(!token){
     })
     .then(data => {
         if(data){
-            
+            putProfile()
         } else {
-            console.log('Profile imcomplet');
+            console.log('Profil imcomplet');
         }
     })
     .catch(error => {
         console.error(error);
     });
+
+    function putProfile(){
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'x-api-key': `${key}`,
+                'Authorization': `${token}`
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (response.status !== 200) {
+                throw new Error('Erreur lors de la récupération des données.');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if(data){
+                
+            } else {
+                console.log('Profil imcomplet');
+            }
+        })
+        .catch(error => {
+            console.error(error);
+        })
+    }
