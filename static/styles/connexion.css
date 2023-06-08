@@ -11,7 +11,7 @@ main form{
     flex-direction: column;
     background-color: #fff;
     border-radius: 10px;
-    border: 1px #000 solid;
+    border: 2px #B22621 solid;
     padding: 25px;
 }
 main > form input{

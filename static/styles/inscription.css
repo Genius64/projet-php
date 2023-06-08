@@ -11,7 +11,7 @@ main form{
     flex-direction: column;
     background-color: #fff;
     border-radius: 10px;
-    border: 1px #000 solid;
+    border: 2px #B22621 solid;
     padding: 25px;
 }
 main > form input{
@@ -54,6 +54,9 @@ main form section{
 }
 main form #checkbox-terms{
     flex-direction: row;
+}
+#terms{
+    width: 25px;
 }
 @media screen and (min-width: 700px){
     main{
