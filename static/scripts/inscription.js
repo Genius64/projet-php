@@ -1,4 +1,6 @@
-const btnInscription = document.getElementById('inscription')
+const btnInscription = document.getElementById('inscription');
+
+/* 
 const key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Nzk0Nzg2OTYsImV4cCI6MTY3OTQ3ODc1Nn0._9GmsGJmrKFl3L21dnKjv__RGXAEOjDdAj9pe8PIpqo';
 
 btnInscription.addEventListener("click", e =>{
@@ -44,4 +46,5 @@ btnInscription.addEventListener("click", e =>{
         alert("Formulaire incomplet ou invalide");
     }
     e.preventDefault();
-});
+}); 
+*/

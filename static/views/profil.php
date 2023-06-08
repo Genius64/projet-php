@@ -11,10 +11,10 @@
 </head>
 <body>
     <header>
-        <a href="../../"><img src="../assets/images/logo.svg" alt="Search / jeux de rôle"></a>
+        <a href="../../index.php"><img src="../assets/images/logo.svg" alt="Search / jeux de rôle"></a>
         <nav>
             <a href="#" class="btn">Connexion</a>
-            <a href="inscription.html" class="btn">Inscription</a>
+            <a href="inscription.php" class="btn">Inscription</a>
         </nav>
     </header>
     <main>
@@ -30,7 +30,7 @@
                 <p id="password"></p><i class="fa-regular fa-pen-to-square"></i>
             </li>
         </ul>
-        <p><i class="fa-solid fa-star" style="color: #FFF500;"></i> Favorits <i id="caret-right" class="fa-solid fa-caret-right"></i><i id="caret-down" class="fa-solid fa-caret-down"></i></p>
+        <div><i class="fa-solid fa-star" style="color: #FFF500;"></i> Favorits <i id="caret-right" class="fa-solid fa-caret-right"></i><i id="caret-down" class="fa-solid fa-caret-down"></i></div>
         <label for="description">Description</label>
         <textarea name="description" id="description" cols="30" rows="10" placeholder="facultatif..."></textarea>
         <input class="submit" type="submit" value="Enregistrer">

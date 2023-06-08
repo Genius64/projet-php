@@ -10,15 +10,15 @@
 </head>
 <body>
     <header>
-        <a href="../../"><img src="../assets/images/logo.svg" alt="Search / jeux de rôle"></a>
+        <a href="../../index.php"><img src="../assets/images/logo.svg" alt="Search / jeux de rôle"></a>
         <nav>
-            <a href="connexion.html" class="btn">Connexion</a>
-            <a href="inscription.html" class="btn">Inscription</a>
+            <a href="connexion.php" class="btn">Connexion</a>
+            <a href="inscription.php" class="btn">Inscription</a>
         </nav>
     </header>
     <main>
         <h1>INSCRIPTION</h1>
-        <form>
+        <form action="<?php echo htmlspecialchars($_SERVER[""]);?>" method="post">
             <section>
                 <label for="username">Nom d'utilisateur</label>
                 <input type="text" id="username" placeholder="Utilisateur205">
@@ -45,3 +45,11 @@
     <script src="../scripts/inscription.js"></script>
 </body>
 </html>
+
+<?php
+$username = $_POST['username'];
+$mail = $_POST['mail']
+if ($username.length >= 4 && $mail.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/) && password.length >= 8 && password === passwordConfirm){
+
+}
+?>

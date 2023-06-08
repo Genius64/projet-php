@@ -11,10 +11,10 @@
 </head>
 <body>
     <header>
-        <a href="../../"><img src="static/assets/images/logo.svg" alt="Search / jeux de rôle"></a>
+        <a href="#"><img src="static/assets/images/logo.svg" alt="Search / jeux de rôle"></a>
         <nav>
-            <a href="static/views/connexion.html" class="btn">Connexion</a>
-            <a href="static/views/inscription.html" class="btn">Inscription</a>
+            <a href="static/views/connexion.php" class="btn">Connexion</a>
+            <a href="static/views/inscription.php" class="btn">Inscription</a>
         </nav>
     </header>
     <main>
