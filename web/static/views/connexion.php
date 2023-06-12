@@ -1,3 +1,10 @@
+<?php
+include '../../../src/controller/userConnexion.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    userConnection();
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,14 +25,14 @@
     </header>
     <main>
         <h1>CONNEXION</h1>
-        <form>
+        <form method="post">
             <section id="sec-email">
                 <label for="email">Adresse e-mail</label>
-                <input type="email" id="email" placeholder="email@site.com">
+                <input type="email" id="email" name="email" placeholder="email@site.com">
             </section>
             <section id="sec-password">
                 <label for="password">Mot de passe</label>
-                <input type="password" id="password" placeholder=".............">
+                <input type="password" id="password" name="password" placeholder=".............">
                 <a href="#">mot de passe oublié ?</a>
             </section>
             <section>
@@ -35,6 +42,5 @@
             <input type="submit" id="btn-connexion" class="submit" value="Connexion">
         </form>
     </main>
-    <script src="../scripts/connexion.js"></script>
 </body>
 </html>

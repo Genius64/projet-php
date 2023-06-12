@@ -1,3 +1,9 @@
+<?php
+include '../../../src/controller/userData.php';
+
+// Appel de la fonction pour récupérer les données de l'utilisateur
+$userData = getUserData();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -25,15 +31,11 @@
                 <img id="profilePicture" src="#" alt="Image de profil">
             </li>
             <li>
-                <p id="username"></p><i class="fa-regular fa-pen-to-square"></i>
-                <p id="email"></p><i class="fa-regular fa-pen-to-square"></i>
-                <p id="password"></p><i class="fa-regular fa-pen-to-square"></i>
+                <p id="username"><?php echo $userData['username']; ?></p><i class="fa-regular fa-pen-to-square"></i>
+                <p id="email"><?php echo $userData['email']; ?></p><i class="fa-regular fa-pen-to-square"></i>
+                <p id="password"><?php echo '**********'; ?></p><i class="fa-regular fa-pen-to-square"></i>
             </li>
         </ul>
-        <div><i class="fa-solid fa-star" style="color: #FFF500;"></i> Favorits <i id="caret-right" class="fa-solid fa-caret-right"></i><i id="caret-down" class="fa-solid fa-caret-down"></i></div>
-        <label for="description">Description</label>
-        <textarea name="description" id="description" cols="30" rows="10" placeholder="facultatif..."></textarea>
-        <input class="submit" type="submit" value="Enregistrer">
-        
+        <input type="text">
     </main>
 </body>

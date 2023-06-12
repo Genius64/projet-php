@@ -1,26 +1,10 @@
 <?php
+include '../../../src/controller/insertion.php';
 
-$bdd = new PDO('mysql:host=localhost;dbname=users_search;charset=utf8', 'root', '');
-
-$username = $_POST['username'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-$passwordConfirm = $_POST['password-confirm'];
-
-try {
-    if (!isset($_POST['email'])) throw new Exception("Le paramètre email est absent");
-    if (!isset($_POST['username'])) throw new Exception("Le paramètre username est absent");
-    if (!isset($_POST['password'])) throw new Exception("Le paramètre password est absent");
-
-    $Format_Content = '#[a-z0-9]{1,}[\-\_\.a-z0-9]{0,}@[a-z]{2,}[\-\_\.a-z0-9]{0,}\.[a-z]{2,6}$#';
-    
-
-} catch (Exception $e) {
-    
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    registerUser();
 }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -41,22 +25,22 @@ try {
     </header>
     <main>
         <h1>INSCRIPTION</h1>
-        <form action="<?php echo htmlspecialchars();?>" method="post">
+        <form method="post">
             <section>
                 <label for="username">Nom d'utilisateur</label>
-                <input type="text" id="username" placeholder="Utilisateur205">
+                <input type="text" id="username" name="username" placeholder="Utilisateur205">
             </section>
             <section>
                 <label for="email">Adresse e-mail</label>
-                <input type="email" id="email" placeholder="email@site.com">
+                <input type="email" id="email" name="email" placeholder="email@site.com">
             </section>
             <section>
                 <label for="password">Mot de passe</label>
-                <input type="password" id="password" placeholder=".............">
+                <input type="password" id="password" name="password" placeholder=".............">
             </section>
             <section>
                 <label for="password-confirm">Confirmation mot de passe</label>
-                <input type="password" id="password-confirm" placeholder=".............">
+                <input type="password" id="password-confirm" name="password-confirm" placeholder=".............">
             </section>
             <section id="checkbox-terms">
                 <input type="checkbox" id="terms">
