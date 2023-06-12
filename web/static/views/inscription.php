@@ -1,3 +1,26 @@
+<?php
+
+$bdd = new PDO('mysql:host=localhost;dbname=users_search;charset=utf8', 'root', '');
+
+$username = $_POST['username'];
+$email = $_POST['email'];
+$password = $_POST['password'];
+$passwordConfirm = $_POST['password-confirm'];
+
+try {
+    if (!isset($_POST['email'])) throw new Exception("Le paramètre email est absent");
+    if (!isset($_POST['username'])) throw new Exception("Le paramètre username est absent");
+    if (!isset($_POST['password'])) throw new Exception("Le paramètre password est absent");
+
+    $Format_Content = '#[a-z0-9]{1,}[\-\_\.a-z0-9]{0,}@[a-z]{2,}[\-\_\.a-z0-9]{0,}\.[a-z]{2,6}$#';
+    
+
+} catch (Exception $e) {
+    
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,7 +41,7 @@
     </header>
     <main>
         <h1>INSCRIPTION</h1>
-        <form action="<?php echo htmlspecialchars($_SERVER[""]);?>" method="post">
+        <form action="<?php echo htmlspecialchars();?>" method="post">
             <section>
                 <label for="username">Nom d'utilisateur</label>
                 <input type="text" id="username" placeholder="Utilisateur205">
@@ -45,11 +68,3 @@
     <script src="../scripts/inscription.js"></script>
 </body>
 </html>
-
-<?php
-$username = $_POST['username'];
-$mail = $_POST['mail']
-if ($username.length >= 4 && $mail.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/) && password.length >= 8 && password === passwordConfirm){
-
-}
-?>
