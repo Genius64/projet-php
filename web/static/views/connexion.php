@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </section>
             <section id="sec-password">
                 <label for="password">Mot de passe</label>
-                <input type="password" id="password" name="password" placeholder=".............">
+                <input type="password" id="password" name="password" placeholder="*************">
                 <a href="#">mot de passe oublié ?</a>
             </section>
             <section>

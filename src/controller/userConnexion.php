@@ -21,10 +21,8 @@ function userConnection()
         $user = $request->fetch(PDO::FETCH_ASSOC);
 
         if ($user && password_verify($password, $user['password'])) {
-            // L'utilisateur est connecté avec succès
-            // Effectuez les opérations nécessaires (par exemple, définissez les variables de session)
-
-            // Redirigez vers une autre page
+            session_start();
+            $_SESSION['user_id'] = $user['id'];
             header("Location: ../../static/views/profil.php");
             exit();
         } else {

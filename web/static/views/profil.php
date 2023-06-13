@@ -2,7 +2,8 @@
 include '../../../src/controller/userData.php';
 
 // Appel de la fonction pour récupérer les données de l'utilisateur
-$userData = getUserData();
+session_start();
+$userData = getUserData($_SESSION['user_id']);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -25,17 +26,27 @@ $userData = getUserData();
     </header>
     <main>
         <h1>PROFIL</h1>
-        <ul>
-            <li>
+        <section id="profil-data">
+            <section>
                 <i class="fa-solid fa-user"></i>
-                <img id="profilePicture" src="#" alt="Image de profil">
-            </li>
-            <li>
-                <p id="username"><?php echo $userData['username']; ?></p><i class="fa-regular fa-pen-to-square"></i>
-                <p id="email"><?php echo $userData['email']; ?></p><i class="fa-regular fa-pen-to-square"></i>
-                <p id="password"><?php echo '**********'; ?></p><i class="fa-regular fa-pen-to-square"></i>
-            </li>
-        </ul>
-        <input type="text">
+                <img id="profilePicture" src="#">
+            </section>
+            <table>
+                <tr>
+                    <td id="username"><?php echo $userData['username']; ?></td>
+                    <td><i class="fa-regular fa-pen-to-square"></i></td>
+                </tr>
+                <tr>
+                    <td id="email"><?php echo $userData['email']; ?></td>
+                    <td><i class="fa-regular fa-pen-to-square"></i></td>
+                </tr>
+                <tr>
+                    <td id="password"><?php echo '**********'; ?></td>
+                    <td><i class="fa-regular fa-pen-to-square"></i></td>
+                </tr>
+            </table>
+        </section>
+        <input id="description" type="text" placeholder="Facultatif...">
     </main>
 </body>
+</html>

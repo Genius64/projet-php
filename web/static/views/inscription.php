@@ -36,11 +36,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </section>
             <section>
                 <label for="password">Mot de passe</label>
-                <input type="password" id="password" name="password" placeholder=".............">
+                <input type="password" id="password" name="password" placeholder="*************">
             </section>
             <section>
                 <label for="password-confirm">Confirmation mot de passe</label>
-                <input type="password" id="password-confirm" name="password-confirm" placeholder=".............">
+                <input type="password" id="password-confirm" name="password-confirm" placeholder="*************">
             </section>
             <section id="checkbox-terms">
                 <input type="checkbox" id="terms">

@@ -11,7 +11,6 @@ function bddConnection()
         
         // Définir le mode d'erreur PDO sur exception
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Connexion réussie";
         return $bdd; // Retourner l'objet PDO pour pouvoir l'utiliser dans d'autres fonctions
     } catch(PDOException $e) {
         echo "Connexion échouée: " . $e->getMessage();
