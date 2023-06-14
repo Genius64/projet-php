@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <header>
         <a href="../../index.php"><img src="../assets/images/logo.svg" alt="Search / jeux de rôle"></a>
         <nav>
-            <a href="profil.php" class="btn">Connexion</a>
+            <a href="#" class="btn">Connexion</a>
             <a href="inscription.php" class="btn">Inscription</a>
         </nav>
     </header>

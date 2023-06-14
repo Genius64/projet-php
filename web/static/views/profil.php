@@ -3,7 +3,11 @@ include '../../../src/controller/userData.php';
 
 // Appel de la fonction pour récupérer les données de l'utilisateur
 session_start();
-$userData = getUserData($_SESSION['user_id']);
+if ($_SESSION['user_id']) {
+    $userData = getUserData($_SESSION['user_id']);
+}else{
+    header("localtion:connexion.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -19,9 +23,25 @@ $userData = getUserData($_SESSION['user_id']);
 <body>
     <header>
         <a href="../../index.php"><img src="../assets/images/logo.svg" alt="Search / jeux de rôle"></a>
-        <nav>
+        <nav style="<?php 
+        if($_SESSION['user_id']){
+            echo "display:none;";
+        }else{
+            echo "display:display;";
+        }
+        ?>">
             <a href="#" class="btn">Connexion</a>
             <a href="inscription.php" class="btn">Inscription</a>
+        </nav>
+        <nav style="<?php 
+        if($_SESSION['user_id']){
+            echo "display:display;";
+        }else{
+            echo "display:none;";
+        }
+        ?>">
+            <a href="connexion.php" class="btn">Déconnexion</a>
+            <a href="#" class="btn">Profil</a>
         </nav>
     </header>
     <main>
