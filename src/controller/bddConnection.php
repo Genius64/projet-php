@@ -3,8 +3,8 @@ function bddConnection()
 {
     $hostname = 'localhost';
     $dbname = 'users_search';
-    $username = 'root'; // Veuillez changer cela selon votre configuration XAMPP
-    $password = ''; // Veuillez changer cela selon votre configuration XAMPP
+    $username = 'root';
+    $password = ''; 
     
     try {
         $bdd = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);

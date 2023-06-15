@@ -6,6 +6,7 @@ function userConnection()
     $bdd = bddConnection();
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
+    session_start();
 
     try {
         if (empty($email)) {
@@ -13,6 +14,12 @@ function userConnection()
         }
         if (empty($password)) {
             throw new Exception("Le champ mot de passe est vide");
+        }
+        $_SESSION['connection_time'] = null;
+        if(!isset($_POST['remember'])){
+            $_SESSION['connection_time'] = j(30);
+        } else {
+            $_SESSION['connection_time'] = s(5);
         }
 
         $sqlQuery = "SELECT * FROM users WHERE email = :email";
@@ -35,4 +42,11 @@ function userConnection()
         $bdd = null;
     }
 }
+function s($secondes){
+    return $secondes * 1000 ;
+}
+function j($jours){
+    return $jours * s(86400);
+}
+    
 ?>

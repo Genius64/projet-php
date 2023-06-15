@@ -26,14 +26,15 @@ $_SESSION['last_activity'] = time();
     <title>Search | Accueil</title>
 </head>
 
+
 <script>
-    // Envoie une requête AJAX toutes les 5 secondes
+    // Envoie une requête AJAX toutes les x secondes
     setInterval(function() {
-        var xhr = new XMLHttpRequest();
+        let xhr = new XMLHttpRequest();
         xhr.open('GET', 'keep_alive.php', true);
         xhr.send();
-    }, 5000);
-</script>
+    }, 5000) // 5 secondes
+</script>;
 
 <body>
     <header>
