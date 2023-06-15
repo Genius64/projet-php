@@ -13,6 +13,9 @@ body{
 body > *{
     width: 95vw;
 }
+header form input{
+    height: 100%;
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -46,7 +49,7 @@ header nav{
     cursor: pointer;
     color: #000;
 }
-header nav :last-child{
+header nav > :last-child{
     border-color: #000;
     background-color: #EE412D;
     color: #fff;

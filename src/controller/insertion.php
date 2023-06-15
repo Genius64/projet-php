@@ -19,6 +19,9 @@ function registerUser()
         if (empty($password)) {
             throw new Exception("Le paramètre password est absent");
         }
+        if (!isset($_POST['terms'])){
+            throw new Exception("Veuillez accepter les conditons d'utilisation");
+        }
 
         $formatUsername = '/(?=^.{4,}$)/';
         $formatEmail = '/[a-z0-9]{1,}[\-\_\.a-z0-9]{0,}@[a-z]{2,}[\-\_\.a-z0-9]{0,}\.[a-z]{2,6}$/';

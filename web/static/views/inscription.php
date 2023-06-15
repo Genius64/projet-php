@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="password" id="password-confirm" name="password-confirm" placeholder="*************">
             </section>
             <section id="checkbox-terms">
-                <input type="checkbox" id="terms">
+                <input type="checkbox" id="terms" name="terms">
                 <label for="terms">J’accepte les conditions d’utilisation</label>
             </section>
             <input type="submit" id="inscription" class="submit" value="Inscription">

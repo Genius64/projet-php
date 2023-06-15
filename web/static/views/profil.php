@@ -3,11 +3,12 @@ include '../../../src/controller/userData.php';
 
 // Appel de la fonction pour récupérer les données de l'utilisateur
 session_start();
-if ($_SESSION['user_id']) {
-    $userData = getUserData($_SESSION['user_id']);
-}else{
-    header("localtion:connexion.php");
+
+if($_SESSION['user_id'] === null){
+    header("Location:connexion.php");
 }
+
+$userData = getUserData($_SESSION['user_id']);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -27,20 +28,22 @@ if ($_SESSION['user_id']) {
         if($_SESSION['user_id']){
             echo "display:none;";
         }else{
-            echo "display:display;";
+            echo "display:flex;";
         }
         ?>">
-            <a href="#" class="btn">Connexion</a>
+            <a href="connexion.php" class="btn">Connexion</a>
             <a href="inscription.php" class="btn">Inscription</a>
         </nav>
         <nav style="<?php 
         if($_SESSION['user_id']){
-            echo "display:display;";
+            echo "display:flex;";
         }else{
             echo "display:none;";
         }
         ?>">
-            <a href="connexion.php" class="btn">Déconnexion</a>
+            <form action="../../../src/controller/deconnexion.php" method="post" id="logoutForm">
+                <input type="submit" name="logout_button" value="Déconnexion" class="btn"/>
+            </form>
             <a href="#" class="btn">Profil</a>
         </nav>
     </header>
